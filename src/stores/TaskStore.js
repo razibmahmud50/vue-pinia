@@ -31,7 +31,7 @@ export const useTaskStore = defineStore('task-store', {
             const res = await fetch("http://localhost:3000/tasks", {
                 method: "POST",
                 body: JSON.stringify(task),
-                headers: { 'Content-type': 'application.json' }
+                headers: { 'Content-type': 'application/json' }
             })
             if (res.error) {
                 console.log(res.error)
@@ -56,7 +56,7 @@ export const useTaskStore = defineStore('task-store', {
             const res = await fetch("http://localhost:3000/tasks/" + id, {
                 method: "PATCH",
                 body: JSON.stringify({ isFav: task.isFav }),
-                headers: { 'Content-type': 'application.json' }
+                headers: { 'Content-type': 'application/json' }
             })
             if (res.error) {
                 console.log(res.error)
